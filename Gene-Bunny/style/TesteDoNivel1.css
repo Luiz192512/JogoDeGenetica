@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.bunnies {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bunny-container {
+    margin: 10px;
+    text-align: center;
+}
+
+.bunny {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
+
+.genotype-label {
+    display: block;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+[data-genotype="PP"] .genotype-label {
+    background-color: #000;
+}
+
+[data-genotype="Pp"] .genotype-label {
+    background-color: #888;
+}
+
+[data-genotype="pp"] .genotype-label {
+    background-color: #fff;
+    color: #000;
+}
+
+.hidden {
+    display: none;
+}

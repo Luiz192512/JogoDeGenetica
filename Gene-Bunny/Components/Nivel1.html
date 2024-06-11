@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Nome do jogo/style/TesteDoNivel1.css">
+</head>
+<body>
+    <div class="header">
+        <div class="title">Dominância e Recessividade</div>
+        <button id="select-button">Selecionar</button>
+    </div>
+    <!--!!!Criar Imagem das Orientações!!!-->
+    <div class="objectives">
+        <p>OBJETIVOS:</p>
+        <ul>
+            <li>Gerar dois coelhos Homozigotos dominantes (PP)</li>
+            <li>Gerar três coelhos heterozigotos (Pp)</li>
+            <li>Gerar dois coelhos homozigotos recessivos (pp)</li>
+        </ul>
+    </div>
+    <div class="buttons">
+        <button id="continue-button">Continuar</button>
+        <button id="exit-button">Sair</button>
+    </div>
+    <div class="bunnies">
+        <div class="bunny-container" data-genotype="PP">
+            <img src="/Gene-Bunny/assets/img/bunny1.png" class="bunny" data-genotype="PP">
+            <span class="genotype-label">PP</span>
+        </div>
+        <div class="bunny-container" data-genotype="pp">
+            <img src="/Gene-Bunny/assets/img/bunny3.png" class="bunny" data-genotype="pp">
+            <span class="genotype-label">pp</span>
+        </div>
+    </div>
+    <!--!!!Criar Imagem de Fase concluida!!!-->
+    <div id="stage-completed" class="hidden">
+        <img src="stage-completed.png" alt="Fase Concluída" style="background-color: violet;">
+    </div>
+    <script src="/Gene-Bunny/js/script.js"></script>
+</body>
+</html>
