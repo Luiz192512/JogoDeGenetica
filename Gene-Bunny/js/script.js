@@ -50,9 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getOffspringGenotype(genotype1, genotype2) {
         const punnettSquare = {
-            'PP': { 'PP': ['PP'], 'Pp': ['PP', 'Pp'], 'pp': ['Pp'] },
-            'Pp': { 'PP': ['PP', 'Pp'], 'Pp': ['PP', 'Pp', 'Pp', 'pp'], 'pp': ['Pp', 'pp'] },
-            'pp': { 'PP': ['Pp'], 'Pp': ['Pp', 'pp'], 'pp': ['pp'] }
+            'BB': { 'PP': ['PP'], 'Pp': ['PP', 'Pp'], 'pp': ['Pp'] },
+            'BC': { 'PP': ['PP', 'Pp'], 'Pp': ['PP', 'Pp', 'Pp', 'pp'], 'pp': ['Pp', 'pp'] },
+            'CC': { 'PP': ['Pp'], 'Pp': ['Pp', 'pp'], 'pp': ['pp'] }
         };
 
         const possibilities = punnettSquare[genotype1][genotype2];
@@ -62,11 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getBunnyImage(genotype) {
         if (genotype === 'PP') {
-            return '/Gene-Bunny/assets/img/bunny1.png'; // Substitua pelo caminho da imagem do coelho preto
+            return '/assets/img/bunny1.png'; // Substitua pelo caminho da imagem do coelho preto
         } else if (genotype === 'Pp') {
-            return '/Gene-Bunny/assets/img/bunny2.png'; // Substitua pelo caminho da imagem do coelho cinza
+            return '/assets/img/bunny2.png'; // Substitua pelo caminho da imagem do coelho cinza
         } else if (genotype === 'pp') {
-            return '/Gene-Bunny/assets/img/bunny3.png'; // Substitua pelo caminho da imagem do coelho branco
+            return '/assets/img/bunny3.png'; // Substitua pelo caminho da imagem do coelho branco
         }
     }
 
