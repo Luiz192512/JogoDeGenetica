@@ -50,9 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getOffspringGenotype(genotype1, genotype2) {
         const punnettSquare = {
-            'BB': { 'PP': ['PP'], 'Pp': ['PP', 'Pp'], 'pp': ['Pp'] },
-            'BC': { 'PP': ['PP', 'Pp'], 'Pp': ['PP', 'Pp', 'Pp', 'pp'], 'pp': ['Pp', 'pp'] },
-            'CC': { 'PP': ['Pp'], 'Pp': ['Pp', 'pp'], 'pp': ['pp'] }
+            'BB': { 'BB': ['BB'], 'BC': ['BB', 'BC'], 'CC': ['BC'] },
+            'BC': { 'BB': ['BB', 'BC'], 'BC': ['BB', 'BC', 'BC', 'CC'], 'CC': ['BC', 'CC'] },
+            'CC': { 'BB': ['BC'], 'BC': ['BC', 'CC'], 'CC': ['CC'] }
         };
 
         const possibilities = punnettSquare[genotype1][genotype2];
@@ -61,20 +61,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function getBunnyImage(genotype) {
-        if (genotype === 'PP') {
-            return '/assets/img/bunny1.png'; // Substitua pelo caminho da imagem do coelho preto
-        } else if (genotype === 'Pp') {
-            return '/assets/img/bunny2.png'; // Substitua pelo caminho da imagem do coelho cinza
-        } else if (genotype === 'pp') {
-            return '/assets/img/bunny3.png'; // Substitua pelo caminho da imagem do coelho branco
+        if (genotype === 'BB') {
+            return '/Gene-Bunny/assets/img/bunny1.png'; // Substitua pelo caminho da imagem do coelho preto
+        } else if (genotype === 'BC') {
+            return '/Gene-Bunny/assets/img/bunny2.png'; // Substitua pelo caminho da imagem do coelho cinza
+        } else if (genotype === 'CC') {
+            return '/Gene-Bunny/assets/img/bunny3.png'; // Substitua pelo caminho da imagem do coelho branco
         }
     }
 
     function checkObjectives() {
         const counts = {
-            'PP': 0,
-            'Pp': 0,
-            'pp': 0
+            'BB': 0,
+            'BC': 0,
+            'CC': 0
         };
 
         document.querySelectorAll('.bunny').forEach(bunny => {
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
             counts[genotype]++;
         });
 
-        if (counts['PP'] >= 2 && counts['Pp'] >= 3 && counts['pp'] >= 2) {
+        if (counts['BB'] >= 4 && counts['BC'] >= 5 && counts['CC'] >= 3) {
             stageCompleted.classList.remove('hidden');
         }
     }
