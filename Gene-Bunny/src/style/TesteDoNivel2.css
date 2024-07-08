@@ -14,24 +14,24 @@ body {
     margin-bottom: 20px;
 }
 
-.bunnies {
+.coelhos {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.bunny-container {
+.coelho-container {
     margin: 10px;
     text-align: center;
 }
 
-.bunny {
+.coelho {
     cursor: pointer;
     width: 100px;
     height: 100px;
 }
 
-.genotype-label {
+.genotipo-label {
     display: block;
     margin-top: 5px;
     padding: 5px;
@@ -39,15 +39,15 @@ body {
     color: #fff;
 }
 
-[data-genotype="PP"] .genotype-label {
+[data-genotipo="BB"] .genotipo-label {
     background-color: #000;
 }
 
-[data-genotype="Pp"] .genotype-label {
+[data-genotipo="BC"] .genotipo-label {
     background-color: #888;
 }
 
-[data-genotype="pp"] .genotype-label {
+[data-genotipo="CC"] .genotipo-label {
     background-color: #fff;
     color: #000;
 }
